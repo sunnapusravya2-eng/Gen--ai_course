@@ -1,0 +1,81 @@
+Why nlp is need
+Computers understand numbers and binary data, not human language directly.
+
+NLP converts" human language into a format that computers can understand" and process.
+## Why is NLP Used?                                           
+
+NLP is used to:
+
+- Understand human language                                     
+
+- Convert text into meaningful information
+- Generate human-like responses
+- Translate languages
+- Analyze emotions and sentiments
+- Summarize large texts
+- Build chatbots and virtual assistants
+
+TYPE OF NLP
+1.NLU-NATURAL LANGUAGE UNDERSTANDINNG
+2.NATURAL LANGUAGE GENREATION 
+
+How NLP works 
+
+Natural Language Processing (NLP) works by breaking down unstructured human language into structured mathematical data that machine learning algorithms can understand and then  analyze, interpret, and learn from.
+
+NLP WORKFLOW 
+Input                                                   
+↓
+Preprocessing                            
+ ↓
+Tokenization ( tokens and token id )                    
+
+ ↓
+Understanding
+ ↓
+Processing
+ ↓
+Response
+ ↓
+Output
+
+EXAPLANATION: of work flow 
+ 
+01_ User INPUT: WHAT IS GEN AI 
+                     ↓
+02_The text is cleaned and prepared for processing.
+
+Tasks:
+- Remove special characters
+- Convert to lowercase
+- Remove unnecessary words
+                     ↓
+03_ Tokens:
+["What", "is", "Generative", "AI"]
+                    ↓
+Token ids:
+[101, 205, 3501, 9552]
+                   ↓
+Focuses on understanding the meaning of human language.
+
+Computer only understand the binary format so that it will break down tokens  and token numbers so that is called vector embedding 
+                ↓
+04_ Language Understanding
+  The system identifies:
+- Meaning
+- Intent
+- Context
+             ↓
+05_Generate the response 
+
+
+
+
+
+
+
+
+
+
+
+
