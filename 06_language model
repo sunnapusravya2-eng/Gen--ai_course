@@ -1,0 +1,139 @@
+A Language Model (LM) in AI is a system that learns patterns in human language and predicts the next word (or token) in a sequence. It helps computers understand, generate, summarize, translate, and answer questions using natural language.
+Simple Example
+If you type:
+	"I love to drink"
+A language model predicts the most likely next word, such as:
+	"coffee", "tea", or "water"
+It learns these patterns by training on massive amounts of text data.
+→ We trained the large amount of data by using google information Wikipedia information to that model, so it will generates the new data content using existing data. 
+						             Types of Language Models
+1. Statistical Language Models
+2. Neural Language Models
+3. Transformer-Based Language Models
+   
+1. Statistical Language Models: SLM also called small language model , specific amount of data is trained 
+→7 to 10 million parameters 
+
+"A Statistical Language Model predicts the probability of a word or sentence using statistical information collected from a large text corpus."
+SLM calculates the probability of each word based on training data and chooses the most probable one.
+Example:
+
+P(tea) = 0.45
+P(coffee) = 0.40
+P(water) = 0.10
+P(laptop) = 0.0001
+Prediction:
+O/P:
+I drink a cup of tea  
+
+Examples
+	• Unigram Model =0 words
+	• Bigram Model =1 previous word
+	• Trigram Model =2 previous words
+	• N-gram Model =3 previous words
+
+2. Neural Language Models: A Neural Language Model (NLM) is a language model that uses Artificial Neural Networks to learn language patterns and predict the next word in a sequence.
+ →A Neural Language Model is a language model that uses neural networks and word embeddings to understand context and predict the probability of the next word in a sequence.
+Input Text
+    ↓
+Tokenization
+    ↓
+Word Embeddings
+    ↓
+Neural Network
+    ↓
+Probability Calculation
+    ↓
+Next Word Prediction 
+
+-- Is SLM is there, why we introduced the NLM?
+SLM  has token limitage, and non understand the context of the sentence it only sees the probabillity ,not context.
+So we introduced the NLM.
+
+Types of NLM:
+	• Feed Forward Neural Network (FFNN) 
+	• Recurrent Neural Network (RNN) 
+	• Long Short-Term Memory (LSTM)
+	•  Gated Recurrent Unit (GRU)
+
+Feed Forward Neural Network(FFNN):  it only looks at a fixed window and cannot remember the entire sentence.
+Because information only moves forward: A Feed Forward Neural Network (FFNN) is the simplest type of Artificial Neural Network where information moves in one direction only( it only see the particular word and predict and then  generate the future token, a sentence cannot see the entire sentence )
+
+Input
+ ↓
+Hidden Layer
+ ↓
+Output
+FFNN = Fixed Context + No Memory + Forward-Only Processing. 
+
+Recurrent neural Network(RNN): RNN can remember previous information using its hidden state.
+RNN = Has Memory
+which allows them to remember information from previous inputs and use it while processing the current input.
+Better context understanding than FFNN.
+
+It create future token(hidden) by understanding the previous token 
+	
+Long Short-Term Memory (LSTM):Designed to remember information for a long period of time.
+Why LSTM Was Introduced
+Problem with RNN
+RNN can remember recent information, but as sequences become longer, it gradually forgets older information.
+→ So that’s why we introduced the LSTM has more memory cell to store the data and understand the context of the sentence
+→ An LSTM is an improved version of RNN that can learn and remember long-term dependencies in sequential data using a memory cell and three gates: Forget Gate, Input Gate, and Output Gate.
+
+This is called the Vanishing Gradient Problem, which means that as information passes through many steps in an RNN, the learning signal (gradient) becomes very small. As a result, the network gradually forgets important information from earlier parts of a long sequence and struggles to learn long-term dependencies, making it difficult to remember context from far back in the input.
+LSTM was introduced to solve this problem by maintaining a dedicated memory cell.
+
+Architecture of LSTM
+Input
+  ↓
+Forget Gate
+  ↓
+Input Gate
+  ↓
+Memory Cell
+  ↓
+Output Gate
+  ↓
+Output
+
+Gated Recurrent Unit (GRU): A GRU is a simplified version of LSTM that uses fewer gates and parameters to remember important information over long sequences while training faster.
+While compare to the lstm it was trained so fastly. 
+Researchers wanted a model that could:
+✅ Remember long-term information
+✅ Solve vanishing gradient problem
+✅ Train faster
+✅ Use fewer parameters
+This led to the development of GRU.
+This is exactly how GRU works:
+	• Reset Gate → removes irrelevant information.
+	• Update Gate → keeps useful information and adds new information.
+
+
+
+
+Feature	SLM	NLM
+Based On	Statistics	Neural Networks
+Word Representation	Counts	Embeddings
+Context Understanding	Low	Better
+Long-Term Context	Poor	Moderate
+Examples	Unigram, Bigram, Trigram	FFNN, RNN, LSTM, GRU
+Accuracy	Lower	Higher
+
+
+Feature	FFNN	RNN	LSTM	GRU
+Memory	No	Yes	Yes	Yes
+Long-Term Context	No	Limited	Excellent	Very Good
+Complexity	Low	Medium	High	Medium
+Training Speed	Fast	Medium	Slow	Faster than LSTM
+Example Use	Basic Prediction	Text Sequences	Long Documents	Chatbots
+
+
+
+
+
+
+
+
+
+
+
