@@ -1,0 +1,81 @@
+Embeddings are vector representation of words that attempt a capture its meaning. They are "numerical representation" a that allow machine to understand and process human language. 
+They are different ways to create embedding vectors such as bag of words ,word2vectors , Glove, Bert.
+
+Vectors - 
+"I love Python"
+      ↓
+[0.12, 0.45, -0.78, 0.91, ...]
+
+Embeddings are vector representations of text that capture semantic meaning. Similar meanings have similar vectors."
+
+BAG OF WORDS
+
+Bag of Words is a text representation technique that converts text into numerical vectors based on the frequency or presence of words while ignoring grammar and word order.
+
+counting the occurrence of each word in the vocabulary. Bag of words understand similar  words and take vector representation based on that 
+
+Example:  "I like dogs"
+I     = 1
+like  = 1
+dogs  = 0
+cats  =1
+  each words has each vector based on the meaning 
+
+Word2vector
+
+Which calculate the each token and understand the meaning of the word and then it give vector. It has 300 dimensions that can compare the each features like hair,colour,tail,persons ,living thing or non-living thing, like these……..etc. 
+
+Example: 
+King → [0.25, 0.81, 0.45]
+Queen → [0.27, 0.79, 0.48]
+Man → [0.15, 0.60, 0.30]
+Woman → [0.18, 0.58, 0.35]
+
+
+Type of  embeddings:
+1.Static embedding 
+2.Contextual embedding
+
+ Static embedding: "Static embedding is a fixed vector representation of a word where the word always gets the same embedding regardless of its context." 
+Example: 
+Sentence 1
+
+I deposited money in the bank.
+Embedding:
+
+bank → [0.60, 0.20, 0.90]
+Sentence 2
+
+We sat on the river bank.
+Embedding:
+
+bank → [0.60, 0.20, 0.90]
+
+Here bank is appear two different scenarios but the word of bank vector id is same that is called static embedding 
+
+Contextual embedding: Contextual Embedding is a dynamic word representation where a word's vector changes depending on the surrounding context and meaning of the sentence
+
+Example:
+Sentence 1
+
+Apple released a new iPhone.
+Meaning:
+
+Apple = Company
+Embedding:
+
+Apple → [0.92, 0.15, 0.31]
+
+Sentence 2
+
+I ate an apple after lunch.
+Meaning:
+
+Apple = Fruit
+Embedding:
+
+Apple → [0.18, 0.87, 0.42]
+
+Here apple  is appear two different scenarios but the word of apple  vector id is different based on the meaning, that is called contextual embedding 
+
+
