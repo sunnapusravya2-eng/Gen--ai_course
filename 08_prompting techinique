@@ -1,0 +1,139 @@
+Prompting is a technique that is something that you gave as input text or instruction given to the language model to guide its output.
+→prompt will be either questinoing , statement, or tasks, they are the use communicate their intent to the model.
+A prompt is a message or instruction that tells an AI what task to perform.
+
+Prompt techniques are strategies or methods used to design prompts in a way that helps AI models generate more accurate, relevant, and useful responses.
+						Types of Prompts
+1. Zero-Shot Prompting
+2. One-Shot Prompting
+3. Few-Shot Prompting
+4. Instruction-Based Prompting
+5. Role-Based Prompting
+6. Chain-of-Thought (CoT) Prompting
+7. Contextual Prompting
+8. Iterative Prompting
+ 1. Zero-Shot Prompting: Zero-shot prompting involves giving the AI a task without providing any examples.
+
+Example
+Prompt:
+	"Translate 'Good Morning' into French."
+Output:
+	"Bonjour"
+	
+	• Simple tasks 
+	• Direct questions 
+	• General knowledge queries 
+Advantages:
+	Ø Time saving
+	Ø It is very useful for generates language day to day Activites, 
+	Ø Simple and fast
+	Ø Less token limit
+	Ø Just need to give questinoing
+Disadvantages:
+	Ø No context (without examples it did not understand, it just generates answers
+	Ø Less accuracy
+	Ø If we want exact output than zero shot prompt will not work out
+ 
+2.One shot prompting:  One-shot prompt is better than zero shot prompt it provide one single prompt to understand the model to generate the output.
+Advantages
+	Ø Helps the model understand the required format. 
+	Ø Better accuracy than zero-shot prompting. 
+	Ø Easy to implement. 
+Disadvantages
+	Ø Can lead to inconsistent outputs. 
+	Ø Limited guidance for diverse scenarios. 
+	Ø One example may not be sufficient for complex tasks. 
+
+3.Few Shot prompting: Few shot prompting is better than zero and one shot prompt it provides some few examples to the model to generate the desired output.
+→so it can recognize the pattern, soit will produce some accuracy output.
+Advantages
+	• Improves accuracy and consistency. 
+	• Helps the model learn patterns. 
+	• Effective for classification and extraction tasks. 
+Disadvantages
+	• Requires carefully selected examples. 
+	• Longer prompts increase token usage. 
+	• May not generalize well beyond provided examples.
+
+4. Instruction-Based Prompting
+Definition
+Instruction-based prompting provides clear and explicit instructions about the task.
+Example
+Prompt: "Summarize the following article in 100 words."
+Advantages
+	• Easy to understand and use. 
+	• Produces focused outputs. 
+	• Works well for many NLP tasks. 
+Disadvantages
+	• Ambiguous instructions may cause errors. 
+	• Output quality depends on instruction clarity. 
+	• Complex tasks may need additional context. 
+
+5. Role-Based Prompting
+Definition
+Role-based prompting assigns a specific role or personal to the AI before asking it to perform a task.
+Example
+Prompt: "Act as a software engineer and explain APIs."
+Advantages
+	• Generates domain-specific responses. 
+	• Improves relevance and detail. 
+	• Useful for simulations and expert advice. 
+Disadvantages
+	• AI may not always follow the role accurately. 
+	• Can introduce bias based on the assigned role. 
+	• Results depend on role description quality.
+
+6. Chain-of-Thought (CoT) Prompting
+Definition
+Chain-of-Thought prompting encourages the model to reason through a problem step by step before providing an answer.
+Example
+Prompt: "Solve this math problem step by step."
+Advantages
+	• Improves reasoning and problem-solving. 
+	• Helps with complex calculations. 
+	• Makes the reasoning process transparent.
+	• Better reasoning
+	• Best for complex task. 
+Disadvantages
+	• Produces longer responses. 
+	• Increases computation and token usage. 
+	• Incorrect reasoning may still lead to wrong answers.
+	• Slow response
+	• Not needed for simple tasks
+
+7. Contextual Prompting
+Definition
+Contextual prompting provides background information to help the model better understand the task.
+Example
+Prompt: "I am a beginner in Python. Explain loops with simple examples."
+Advantages
+	• Produces personalized responses. 
+	• Improves relevance and accuracy. 
+	• Helps the model understand user needs. 
+Disadvantages
+	• Requires additional context from the user. 
+	• Long contexts increase prompt length. 
+	• Irrelevant context may confuse the model.
+
+8. Iterative Prompting
+Definition
+Iterative prompting involves refining prompts based on previous outputs to improve results.
+Example
+	1. "Write a paragraph about AI." 
+	2. "Make it shorter." 
+	3. "Add a real-world example." 
+Advantages
+	• Gradually improves output quality. 
+	• Allows fine-tuning of responses. 
+	• Useful for content creation and editing. 
+Disadvantages
+	• Requires multiple interactions. 
+	• More time-consuming and costly.
+	• May increase overall token usage.
+
+
+	
+	
+
+
+
