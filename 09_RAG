@@ -1,0 +1,219 @@
+RAG: Retrieval augmented generation which means llm don't have upto date data so we introduced a topic called "RAG"
+RAG (Retrieval-Augmented Generation) is a technique that combines a Large Language Model (LLM) with an external knowledge source (documents, PDFs, databases, websites) to generate more accurate and up-to-date answers.
+Why RAG?
+Problem with LLMs
+LLMs:
+	• Have limited training data 
+	• Cannot know recent information 
+	• Can hallucinate (make up answers) 
+	• Cannot access private company documents 
+Solution
+RAG allows the LLM to:
+	• Access external documents 
+	• Use latest information 
+	• Reduce hallucinations 
+	• Answer questions about private data 
+
+RAG Architecture
+
+User Question
+       ↓
+Document Retrieval                   
+       ↓
+Relevant Context
+       ↓
+LLM
+       ↓
+Generated Answer
+
+RAG Components
+1. Documents
+Knowledge source for the chatbot.
+Examples:
+	• PDFs 
+	• Word files  
+	• Text files
+	• Company documents
+	• Resumes
+	• websites
+	                                                                
+
+	 
+Example:
+
+resume.pdf
+company_policy.pdf
+employee_handbook.pdf
+
+2. Document Loading
+Reading files into the application.
+Example:
+
+loader = PyPDFLoader("resume.pdf")
+documents = loader.load()
+Output:
+
+Page 1
+Page 2
+Page 3
+
+3. Chunking
+Large documents are split into smaller pieces called chunks.
+Why?
+LLMs cannot process very large documents efficiently.
+Example:
+Original Text:
+
+Artificial Intelligence is transforming industries.
+Machine Learning is a subset of AI.
+Deep Learning is a subset of ML.
+Chunks:
+
+Chunk 1:
+Artificial Intelligence is transforming industries.
+
+Chunk 2:
+Machine Learning is a subset of AI.
+
+Chunk 3:
+Deep Learning is a subset of ML.
+
+4. Embeddings
+Definition
+Embeddings are numerical vector representations of text.
+They convert text into numbers that computers can understand.
+Example:
+
+"Cat"
+
+[0.12, 0.45, 0.78, ...]
+
+"Dog"
+
+[0.15, 0.41, 0.75, ...]
+Cat and Dog vectors are close because their meanings are similar.
+
+5. Vector
+Definition
+A vector is a list of numbers representing text meaning.
+Example:
+
+[0.21, 0.45, 0.78]
+Think of it as a coordinate in a multi-dimensional space.
+
+6. Vector Database
+Definition
+A Vector Database stores embeddings and allows similarity search.
+Examples:
+	• FAISS 
+	• ChromaDB 
+	• Pinecone 
+	• Weaviate 
+
+FAISS Explained
+FAISS = Facebook AI Similarity Search
+It stores vectors and finds similar vectors quickly.
+Example:
+
+Resume Chunk 1 → Vector A
+Resume Chunk 2 → Vector B
+Resume Chunk 3 → Vector C
+Stored in FAISS.
+When user asks:
+
+What skills does Sravya have?
+FAISS finds the most relevant chunk.
+
+Relationship Example
+Think of RAG like a family:
+
+Document
+    ↓
+Chunks
+    ↓
+Embeddings
+    ↓
+Vectors
+    ↓
+FAISS (Vector DB)
+OR
+
+Grandparent → Document
+
+Parent → Chunks
+
+Child → Embeddings/Vectors
+
+House → Vector Database (FAISS)
+
+7. Retrieval
+Definition
+Finding the most relevant chunks from the vector database.
+Example:
+Question:
+
+What is Machine Learning?
+Vector DB searches and returns:
+
+Machine Learning is a subset of AI.
+This is Retrieval.
+
+8. Context
+Retrieved chunks are added to the prompt.
+Example:
+
+Context:
+Machine Learning is a subset of AI.
+
+Question:
+What is Machine Learning?
+
+9. Augmentation
+Adding retrieved information to the prompt.
+Example:
+
+Context:
+Machine Learning is a subset of AI.
+
+Question:
+Explain Machine Learning.
+This step is called Augmentation.
+
+10. Generation
+The LLM generates the final answer.
+Example:
+
+Machine Learning is a branch of Artificial Intelligence that enables systems to learn from data and improve without explicit programming.
+This is Generation.
+
+Complete RAG Flow
+
+PDF File
+   ↓
+Document Loader
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+Vectors
+   ↓
+FAISS / ChromaDB
+   ↓
+User Question
+   ↓
+Embedding of Question
+   ↓
+Similarity Search
+   ↓
+Relevant Chunks Retrieved
+   ↓
+Context Added
+   ↓
+LLM
+   ↓
+Final Answer
+
+
+
+
