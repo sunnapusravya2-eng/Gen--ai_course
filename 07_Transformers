@@ -1,0 +1,67 @@
+
+
+
+
+A Transformer architecture is used to understand and  capture relationships between tokens in a sequence and process and then generate the language. A Transformer is an AI model architecture that learns the meaning of text by paying attention to important words and their relationships within a sentence.
+ Types of Transformer Architecture
+There are 3 type:
+1. Encoder-Only Transformer Architecture
+2.Decoder-only Transformer  Architecture
+3.Encoder and Decoder Only Transformer Architecture
+
+1.Encoder-Only Transformer Architecture: Encoder-only transformers focuses on understanding the meaning and context of input text.
+Example: BERT 
+bidirectional Encoder Representations from Transformers)
+
+Input Sentence
+       ↓
+Tokenization
+       ↓
+Embeddings
+       ↓
+Self-Attention (understand the relationship b/w words)
+       ↓
+Context Understanding
+       ↓
+Output Representation
+2.Decoder-Only Transformer Architecture: Decoder only transformer architecture is a type of  transformer of architecture it sees to the past token and predict the future token and generate the text  
+Example:
+Example:
+Input:
+
+The capital of France is-----------?
+The decoder looks at:
+
+The → capital → of → France → is
+and predicts:
+
+Output: Paris
+  Input
+ ↓
+Tokenizer
+ ↓
+Embedding's
+ ↓
+Vector representation
+ ↓
+Position encoding
+ ↓
+Masked multi head self-attention mechanism 
+ ↓
+Text generation
+
+Examples
+	• GPT 
+	• LLaMA
+
+3.Encoder and Decoder Only Transformer Architecture
+• Encoder-Only = Understands text (good for analysis tasks). 
+• Decoder-Only = Generates text (good for chatbots and content generation).
+Examples:
+	• T5 
+	• BART
+
+
+
+
+
